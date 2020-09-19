@@ -71,38 +71,28 @@ color: var(--logo-black-color);
 }
 
 /* Навигация */
-.site-nav .link {
+.site-nav .link,
+.contact-link {
     font-weight: 500;
-    line-height: 1.15;
+    line-height: 1.14;
     letter-spacing: 0.02em;
 
     color: var(--title-text-color);
 }
 
-.site-nav .link.current {
-    color: var(--accent-color);
-}
-
+.site-nav .link.current,
 .site-nav .link:focus,
-.site-nav .link:hover {
+.site-nav .link:hover,
+.contact-link:hover,
+.contact-link:focus {
     color: var(--accent-color);
 }
 
 .contact-link {
-    font-weight: 500;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
-
-    color: var(--primary-text-color);
+        color: var(--primary-text-color);
 }
 
-.contact-link:hover,
-.contact-link:focus,
-.contact-link:active {
-    color: var(--accent-color);
-    
-}
-
+ 
 /* Герой */
 .hero-title {
 font-weight: 900;
@@ -120,35 +110,39 @@ background-color: var(--black-background-color);
 /* Section */
 .title {
     font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
-    
+            
     color: var(--title-text-color);
 }
 
 
 .feature-list .title {
-line-height: 1.5;
-text-transform: uppercase;
-text-align: left;
+    line-height: 1.4;
+    text-transform: uppercase;
 
 }
 
 .section-projects .title,
 .section.team .title {
     font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
     
 }
 
 .title.team {
     font-size: 16px;
     font-weight: 500;
+    line-height: 1.19;
+    text-align: center;
     
 }
 
 .team-job {
     font-size: 16px;
     line-height: 1.2;
+    text-align: center;
+
+    color: var(--primary-text-color);
 }
 
 .section.team {
@@ -162,9 +156,11 @@ text-align: left;
     letter-spacing: 0.06em;
 }
 
-.portfolio-list > .title > p {
+.portfolio-list p {
     font-size: 16px;
     line-height: 1.88;
+    
+    color: var(--primary-text-color);
 
 }
 
@@ -176,7 +172,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.6;
 text-align: center;
-letter-spacing: 0.03em;
+letter-spacing: inherit;
 
 border: transparent;
 border-radius: 4px;
@@ -187,7 +183,7 @@ background-color: var(--secondary-bg-color);
 
 .button.primary {
 font-family: inherit;
-font-weight: 900;
+font-weight: 700;
 font-size: 16px;
 line-height: 1,88;
 align-items: center;
@@ -199,7 +195,10 @@ background-color:var(--accent-color);
 }
 
 .button.primary:hover,
-.button.primary:focus,
+.button.primary:focus {
+    font-size: 24px;
+}
+
 .button.current,
 .button:hover,
 .button:focus {
