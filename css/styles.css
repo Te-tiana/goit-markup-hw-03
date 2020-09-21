@@ -21,6 +21,12 @@ body {
     letter-spacing: 0.03em;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     width: 1200px;
     margin-left: auto;
@@ -40,11 +46,6 @@ body {
     overflow: hidden;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
 
 /* ul */
 .site-nav,
@@ -57,6 +58,14 @@ img {
     padding: 0;
     margin: 0;
 
+}
+
+/* li:last-child {
+margin-right: 0;
+} */
+
+.item:not(:last-child) {
+    margin-right: 30px;
 }
 
 /* a */
@@ -78,34 +87,45 @@ img {
 .page-header,
 .section,
 .hero,
-.section-projects,
 .section.team,
 .footer {
 margin-top: 0;
 margin-bottom: 0;
 }
 
-.container .item,
-.item {
+.section,
+.section.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.logo,
+.item,
+.site-nav li,
+.contact-link,
+.filter > li {
     display: inline-block;
 }
 
 .title {
+    margin-top: 0;
+    margin-bottom: 0;
+
     vertical-align: middle;
 }
 
-/* .section,
-.section-projects,
-.section.team {
-    padding-bottom: 94px;
-} */
-.title {
-    margin-top: 0;
-    margin-bottom: 0;
+.content {
+    padding: 30px 61px;
+
 }
 
-.content {
-
+.portfolio-list .content {
+    padding: 20px 24px;
 }
 
 /* Logo */
@@ -162,6 +182,7 @@ color: var(--logo-black-color);
     text-align: center;
     background-color: var(--black-background-color);
     align-items: center;
+    
 }
 
 .hero-title {
@@ -171,6 +192,8 @@ line-height: 1.36;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 
+
+max-width: 696px;
 margin-top: 0;
 margin-bottom: 30px;
 
@@ -186,21 +209,23 @@ color: var(--primary-white-color);
     color: var(--title-text-color);
 }
 
-/* Наши преимущества */
-/* .section.features {
-    padding-top: 94px;
-    padding-bottom: 94px;
-} */
-
 .feature-list .title {
     line-height: 1.4;
     text-transform: uppercase;
 
 }
 
-.feature-list .item,
-.list-team .item {
-    width: 270px;
+.section.features {
+    padding-bottom: 0;
+    padding-top: 94px;
+}
+
+.item {
+    width: calc((100% - 3*30px)/4);
+}
+
+.item:nth-child(4n) {
+    margin-right: 0;
 }
 
 /* Наши проекты */
@@ -212,6 +237,11 @@ color: var(--primary-white-color);
     
 }
 
+.section-projects {
+    margin-top: 130px;
+    margin-bottom: 0;
+}
+
 
 .section-projects .title {
     margin-top: 0;
@@ -219,8 +249,13 @@ color: var(--primary-white-color);
 }
 
 .section-projects .item {
-    width: 370px;
+    width: calc((100% - 2*30px)/3);
 }
+
+.section-projects .item:nth-child(3n) {
+    margin-right: 0;
+}
+
 
 .title.team {
     font-size: 16px;
@@ -228,7 +263,7 @@ color: var(--primary-white-color);
     line-height: 1.19;
     text-align: center;
     
-}
+    }
 
 .team-job {
     font-size: 16px;
@@ -242,25 +277,50 @@ color: var(--primary-white-color);
     background-color: var(--secondary-bg-color);
 }
 
+.section.team .title {
+    margin-bottom: 50px;
+}
+
 .list-team .item {
     background-color: var(--primary-white-color);
 }
 
+.list-team {
+    display: flex;
+
+}
+
 /* Portfolio Section */
+.container.filter-list {
+    margin-bottom: 34px;
+}
+
+.filter li:not(:last-child) {
+    margin-right: 8px;
+}
+
 .portfolio-list .title {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+
+    margin-bottom: 4px;
 }
 
 .portfolio-list p {
     font-size: 16px;
     line-height: 1.88;
+
+    margin-top: 0;
+    margin-bottom: 0;
     
     color: var(--primary-text-color);
 
 }
 
+.portfolio-list .item {
+    width: calc((100% - 2*30px)/3);
+}
 
 /* Button */
 .button {
@@ -340,3 +400,7 @@ background-color:var(--accent-color);
     color: var(--accent-color);
 }
 
+.footer a.logo {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
