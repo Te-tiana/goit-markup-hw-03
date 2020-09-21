@@ -120,7 +120,8 @@ margin-bottom: 0;
 }
 
 .content {
-    padding: 30px 61px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 }
 
@@ -130,6 +131,10 @@ margin-bottom: 0;
 
 /* Logo */
 .logo {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 25px;
+
 font-family: Raleway, sans-serif;
 font-weight: 700;
 font-size: 26px;
@@ -157,6 +162,10 @@ color: var(--logo-black-color);
 /* Навигация */
 .site-nav .link,
 .contact-link {
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -173,15 +182,49 @@ color: var(--logo-black-color);
 }
 
 .contact-link {
-        color: var(--primary-text-color);
+    color: var(--primary-text-color);
 }
 
+.contact .contact-link + .contact-link {
+    margin-left: 50px;
+}
+
+.contact
+.contact-link:last-child {
+    margin-right: 0;
+}
+
+.main-nav,
+.site-nav,
+.contact,
+.page-header .container {
+    display: flex;
+}
+
+.page-header .container,
+.contact {
+    align-items: center;
+    
+}
+
+.site-nav {
+    margin-left: 93px;
+}
+
+.site-nav li:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contact {
+    margin-left: auto;
+}
  
 /* Герой */
 .hero {
     text-align: center;
     background-color: var(--black-background-color);
-    align-items: center;
+    padding-bottom: 200px;
+    padding-top: 200px;
     
 }
 
@@ -192,8 +235,6 @@ line-height: 1.36;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 
-
-max-width: 696px;
 margin-top: 0;
 margin-bottom: 30px;
 
@@ -202,7 +243,13 @@ color: var(--primary-white-color);
 }
 
 
+
 /* Section */
+.feature-list,
+.list-projects {
+    display: flex;
+   }
+
 .title {
     font-weight: 700;
             
@@ -215,7 +262,11 @@ color: var(--primary-white-color);
 
 }
 
-.section.features {
+.feature-list p {
+    margin: 0;
+}
+
+.section.features .container {
     padding-bottom: 0;
     padding-top: 94px;
 }
@@ -230,7 +281,7 @@ color: var(--primary-white-color);
 
 /* Наши проекты */
 .section-projects .title,
-.section.team .title {
+.section.team h2 {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -256,8 +307,10 @@ color: var(--primary-white-color);
     margin-right: 0;
 }
 
-
 .title.team {
+    margin-bottom: 10px;
+    margin-top: 0;
+
     font-size: 16px;
     font-weight: 500;
     line-height: 1.19;
@@ -266,6 +319,9 @@ color: var(--primary-white-color);
     }
 
 .team-job {
+    margin-top: 0;
+    margin-bottom: 0;
+
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
@@ -277,7 +333,7 @@ color: var(--primary-white-color);
     background-color: var(--secondary-bg-color);
 }
 
-.section.team .title {
+.section.team h2 {
     margin-bottom: 50px;
 }
 
@@ -295,8 +351,34 @@ color: var(--primary-white-color);
     margin-bottom: 34px;
 }
 
+.filter,
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.filter {
+    justify-content: center;
+    align-items: center;
+}
+
 .filter li:not(:last-child) {
     margin-right: 8px;
+} 
+
+.portfolio-list .item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: calc((100% - 2*30px)/3);
+}
+
+.portfolio-list .item:nth-child(3n) {
+margin-right: 0;
+}
+
+.portfolio-list .item:nth-last-child(n-3) {
+margin-bottom: 0;
 }
 
 .portfolio-list .title {
@@ -318,13 +400,11 @@ color: var(--primary-white-color);
 
 }
 
-.portfolio-list .item {
-    width: calc((100% - 2*30px)/3);
-}
+
 
 /* Button */
 .button {
-    display: inline-block;
+    display: flex;
 font-family: inherit;
 font-weight: 500;
 font-size: 16px;
@@ -343,6 +423,7 @@ background-color: var(--secondary-bg-color);
 }
 
 .button.primary {
+    display: inline-block;
 font-family: inherit;
 font-weight: 700;
 font-size: 16px;
@@ -392,8 +473,13 @@ background-color:var(--accent-color);
     font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.03em; */
-       color: var(--address-link);
+    color: var(--address-link);
 }
+
+.footer .contact-link {
+    margin-bottom: 0;
+    margin-top: 9px;
+    }
 
 .footer .contact-link:hover,
 .footer .contact-link:focus {
