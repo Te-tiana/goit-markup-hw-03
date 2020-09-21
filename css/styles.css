@@ -60,14 +60,6 @@ img {
 
 }
 
-/* li:last-child {
-margin-right: 0;
-} */
-
-.item:not(:last-child) {
-    margin-right: 30px;
-}
-
 /* a */
 .logo,
 .link,
@@ -78,6 +70,12 @@ margin-right: 0;
 .image-team,
 .portfolio-image {
     text-decoration: none;
+}
+
+.item,
+.site-nav li,
+.filter > li {
+    display: inline-block;
 }
 
 .page-header {
@@ -101,41 +99,9 @@ margin-bottom: 0;
     padding-bottom: 94px;
 }
 
-.footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-
-.item,
-.site-nav li,
-.filter > li {
-    display: inline-block;
-}
-
-.title {
-    margin-top: 0;
-    margin-bottom: 0;
-
-    vertical-align: middle;
-}
-
-.content {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-}
-
-.portfolio-list .content {
-    padding: 20px 24px;
-}
-
 /* Logo */
 .logo {
     display: block;
-    /* margin-top: 24px;
-    margin-bottom: 25px; */
-
 font-family: Raleway, sans-serif;
 font-weight: 700;
 font-size: 26px;
@@ -152,11 +118,8 @@ color: var(--logo-black-color);
     color: var(--primary-white-color);
 }
 
-
-.logo:hover,
-.logo>span:hover,
-.logo:focus,
-.logo>span:focus {
+    .logo:hover,
+    .logo:focus{
     font-size: 36px;
 }
     
@@ -188,11 +151,6 @@ color: var(--logo-black-color);
 
 .contact .contact-link + .contact-link {
     margin-left: 50px;
-}
-
-.contact
-.contact-link:last-child {
-    margin-right: 0;
 }
 
 .main-nav,
@@ -243,8 +201,6 @@ color: var(--primary-white-color);
 
 }
 
-
-
 /* Section */
 .feature-list,
 .list-projects {
@@ -280,6 +236,26 @@ color: var(--primary-white-color);
     margin-right: 0;
 }
 
+.item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    vertical-align: middle;
+}
+
+.content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.portfolio-list .content {
+    padding: 20px 24px;
+}
+
 /* Наши проекты */
 .section-projects .title,
 .section.team h2 {
@@ -294,7 +270,6 @@ color: var(--primary-white-color);
     margin-bottom: 0;
 }
 
-
 .section-projects .title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -308,6 +283,7 @@ color: var(--primary-white-color);
     margin-right: 0;
 }
 
+/* Наша команда */
 .title.team {
     margin-bottom: 10px;
     margin-top: 0;
@@ -316,8 +292,7 @@ color: var(--primary-white-color);
     font-weight: 500;
     line-height: 1.19;
     text-align: center;
-    
-    }
+}
 
 .team-job {
     margin-top: 0;
@@ -350,7 +325,10 @@ color: var(--primary-white-color);
 /* Portfolio Section */
 .container.filter-list {
     margin-bottom: 34px;
+
 }
+
+
 
 .filter,
 .portfolio-list {
@@ -400,8 +378,6 @@ margin-bottom: 0;
     color: var(--primary-text-color);
 
 }
-
-
 
 /* Button */
 .button {
@@ -453,6 +429,8 @@ background-color:var(--accent-color);
 
 /* Footer */
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
      font-style: normal;
      background-color: var(--black-background-color);
 }
@@ -490,4 +468,9 @@ background-color:var(--accent-color);
 .footer a.logo {
     margin-bottom: 20px;
     margin-top: 0;
+}
+
+.about-us {
+    margin-right: auto; 
+    width: 231px;
 }
